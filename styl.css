@@ -1,3 +1,9 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font: sans-serif;
+}
+
 .container{
     display: grid;
     height: 100vh;
@@ -6,9 +12,11 @@
 
     grid-template-areas: 
     "nav nav nav nav"
-    "sidebar main main main"
-    "sidebar con1 con2 con3"
-    "sidebar footer footer footer";
+    "sidebar sidebar main main"
+    "con1 con1 con2 con3"
+    "footer footer footer footer";
+
+    grid-gap :0.2rem;
 }
 
 nav{
@@ -17,13 +25,14 @@ nav{
 }
 
 main{
-    background-color: blue;
+    background-color: rgb(227, 227, 242)180, 180, 199)208, 208, 232);
     grid-area: main;
 }
 
 #sidebar{
     background-color: aquamarine;
     grid-area: sidebar;
+    
 }
 
 #con1{
@@ -44,4 +53,11 @@ main{
 footer{
     background-color: cadetblue;
     grid-area: footer;
+}
+
+.image1{
+    width: 200px;
+    height: fit-content;
+    vertical-align: middle;
+    padding: 5px 5px 5px 5px;
 }
