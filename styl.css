@@ -1,0 +1,47 @@
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar con1 con2 con3"
+    "sidebar footer footer footer";
+}
+
+nav{
+    background-color: blanchedalmond;
+    grid-area: nav;
+}
+
+main{
+    background-color: blue;
+    grid-area: main;
+}
+
+#sidebar{
+    background-color: aquamarine;
+    grid-area: sidebar;
+}
+
+#con1{
+    background-color: blueviolet;
+    grid-area: con1;
+}
+
+#con2{
+    background-color: brown;
+    grid-area: con2;
+}
+
+#con3{
+    background-color: burlywood;
+    grid-area: con3;
+}
+
+footer{
+    background-color: cadetblue;
+    grid-area: footer;
+}
