@@ -86,3 +86,9 @@ footer{
     height: 30px;
     padding-right: 5px;
 }
+
+#ForReccomendations{
+    width: 250px;
+    height: 150px;
+    display: block;
+}
