@@ -61,8 +61,6 @@ nav ul li{
 nav ul li a{
     color: white;
     text-decoration: none;
-
-    transition: all 0.3s;
 }
 
 .drop_down{
@@ -72,7 +70,6 @@ nav ul li a{
 nav ul li:hover div.drop_down{
     display: block;
     position: absolute;
-
     left: 0;
     top: 100%;
     background-color: black;
@@ -83,43 +80,28 @@ nav ul li:hover div.drop_down{
     margin: 10px;
 }
 
-.menu{
-    border: 1px solid red;
-    grid-area: menu;
-    display: inline-block;
-    /* text-align: center; */
-    /* flex-direction: row; */
-    justify-content: space-around;
-    /* align-content: center; */
-}
-
 main{
-    /* background-image: -webkit-gradient(); */
     border: 1px solid black;
     grid-area: main;
 }
 
 #sidebar{
-    /* background-color: aquamarine; */
     border: 1px solid black;
     grid-area: sidebar;
     
 }
 
 #con1{
-    /* background-color: blueviolet; */
     border: 1px solid black;
     grid-area: con1;
 }
 
 #con2{
-    /* background-color: brown; */
     border: 1px solid black;
     grid-area: con2;
 }
 
 #con3{
-    /* background-color: burlywood; */
     border: 1px solid black;
     grid-area: con3;
 }
@@ -130,7 +112,6 @@ footer{
     grid-area: footer;
     display: flex;
     justify-content: center;
-  /* align-items: center; */
 }
 
 
@@ -145,8 +126,6 @@ footer{
     direction: rtl;
     font-size: large;
     padding: 1%;
-    
-    /* align-items: end; */
 }
 
 .Icon{
@@ -171,11 +150,7 @@ button{
 
 ul{
     display: flex;
-    /* bottom: auto; */
     list-style-type: none;
-    /* margin: 0; */
-    /* padding: 0; */
-    /* text-decoration: none; */
 }
 
 
@@ -191,8 +166,13 @@ div.container nav ul li:hover{
     background-color: aqua;
 }
 
+nav ul li.icon {
+    display: none;
+}
 
-@media only screen and (max-width: 650px){
+
+
+@media only screen and (max-width: 750px){
     .container{
         grid-template-columns: 1fr;
         grid-template-rows: 0.4fr 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1fr 1fr;
@@ -205,7 +185,30 @@ div.container nav ul li:hover{
         "con1" 
         "con2" 
         "con3" 
-        "footer";
-    
+        "footer";   
     }
+
+    .main-menu li {display: none;}
+
+    .main-menu li.icon {
+        display: block;
+        float: right;
+    }
+    .container nav ul.main-menu.responsive {
+        position: relative;
+        border: 2px solid blue;
+    }
+    
+    .container nav ul.main-menu.responsive .icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .container nav ul.main-menu.responsive li{
+        float: none;
+        display: block;
+        text-align: left;  
+    }
+    
 }

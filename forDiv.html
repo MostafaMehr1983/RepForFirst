@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styl.css">
     <link rel="stylesheet" href="font/lalezar.ttf">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Mostafa Mohammadi Resume</title>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("mymain-menu");
+          if (x.className === "main-menu") {
+            x.className += " responsive";
+          } else {
+            x.className = "main-menu";
+          }
+        }
+    </script>
+        
 </head>
 <body>
     <div class="container">
     
         <nav>
             <h1 class="logo">.My <span>Resume</span></h1>
-            <ul>
+            <ul id="mymain-menu" class="main-menu">
                 <li><a href="#">About</a></li>
                 <li><a href="#">My Work</a></li>
                 <li><a href="#">Pages <i class="down"></i> </a>
@@ -25,6 +37,10 @@
                     </div>
                 </li>
                 <li><a href="#">Contact US</a></li>
+                <li class="icon">  <a href="javascript:void(0);"  onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    </a>
+                </li>
             </ul>
         </nav>
 
